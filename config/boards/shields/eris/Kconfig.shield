@@ -1,2 +1,2 @@
 config SHIELD_ERIS
-    def_bool $(shields_list_contains, Eris)
+    def_bool $(shields_list_contains, eris)
