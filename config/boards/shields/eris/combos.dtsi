@@ -1,0 +1,27 @@
+#include <dt-bindings/zmk/combo.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        shift_esc_pair: combo-shift-esc {
+            timeout-ms = <50>;
+            key-positions = <0 12>;
+            bindings = <&bt BT_PAIR>;
+        };
+
+        shift_key1_sel: combo-shift-key1-sel {
+            timeout-ms = <50>;
+            key-positions = <1 12>;
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        shift_esc_key1_clear: combo-shift-esc-key1-clear {
+            timeout-ms = <50>;
+            key-positions = <0 1 12>;
+            bindings = <&bt BT_CLR>;
+        };
+    };
+};
+
