@@ -7,18 +7,6 @@
             key-positions = <0 12>;
             bindings = <&bt BT_PAIR>;
         };
-
-        shift_key1_sel {
-            timeout-ms = <50>;
-            key-positions = <1 12>;
-            bindings = <&bt BT_SEL 0>;
-        };
-
-        shift_esc_key1_clear {
-            timeout-ms = <50>;
-            key-positions = <0 1 12>;
-            bindings = <&bt BT_CLR>;
-        };
     };
 };
 
