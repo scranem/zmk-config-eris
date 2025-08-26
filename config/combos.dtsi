@@ -1,13 +1,13 @@
 #include <dt-bindings/zmk/bt.h>
 
-/ {
-    combos {
-        compatible = "zmk,combos";
+ / {
+     combos {
+         compatible = "zmk,combos";
 
-        shift_esc_pair {
-            timeout-ms = <50>;
-            key-positions = <0 12>;
-            bindings = <&bt BT_PAIR>;
-        };
-    };
-};
+         shift_esc_pair {
+             timeout-ms = <50>;
+             key-positions = <0 12>;
+             bindings = <&bt BT_PAIR()>;
+         };
+     };
+ };
