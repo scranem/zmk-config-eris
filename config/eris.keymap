@@ -9,7 +9,7 @@
 
         default_layer {
             bindings = <
-                &kp ESC      &kp BSPC
+                &bt BT_PAIR  &kp BSPC
                 &kp 1        &kp 2      &kp 3      &kp 4      &kp 5
                 &kp TAB      &kp Q      &kp W      &kp E      &kp R
                 &kp LSHIFT   &kp A      &kp S      &kp D
