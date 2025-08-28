@@ -9,8 +9,8 @@
 
         default_layer {
             bindings = <
-                &bt BT_SEL 0  &kp BSPC
-                &kp 1        &kp 2      &kp 3      &kp 4      &kp 5
+                &bt ESC  &kp BSPC
+                &kp NUMBER_1 &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4 &kp NUMBER_5
                 &kp TAB      &kp Q      &kp W      &kp E      &kp R
                 &kp LSHIFT   &kp A      &kp S      &kp D
                 &kp LCTRL    &kp Z      &kp X      &kp C
