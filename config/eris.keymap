@@ -15,7 +15,7 @@
                 &kp LSHIFT   &kp A      &kp S      &kp D
                 &kp LCTRL    &kp Z      &kp X      &kp C
                 &kp CAPSLOCK &kp T      &kp LALT   &kp UP
-                &kp SPACE    &kp RIGHT  &kp ENTER  &kp LEFT
+                &kp SPACE    &kp RIGHT  &kp N0  &kp LEFT
                 &kp DOWN     &kp F11    &kp F12
             >;
         };
