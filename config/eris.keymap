@@ -13,9 +13,9 @@
                 &kp CAPSLOCK &kp Q      &kp W     &kp E      &kp R
                 &kp TAB      &kp A      &kp S     &kp D      &kp F
                 &kp LSHIFT   &kp Z      &kp X     &kp C
-                &kp LCTRL    &kp f2     &kp f3    &kp f4
-                &kp f1       &kp f5     &kp t     &kp LALT
-                &kp SPACE    &kp HOME   &kp g     &kp v
+                &kp LCTRL    &kp F2     &kp F3    &kp F4
+                &kp F1       &kp F5     &kp T     &kp LALT
+                &kp SPACE    &kp HOME   &kp G     &kp V
                 &kp END      &kp F11    &kp F12
             >;
         };
