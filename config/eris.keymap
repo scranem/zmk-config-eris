@@ -14,10 +14,14 @@
                 &kp TAB      &kp A      &kp S     &kp D      &kp F
                 &kp LSHIFT   &kp Z      &kp X     &kp C
                 &kp LCTRL    &kp F2     &kp F3    &kp F4
-                &kp F1       &kp F5     &kp T     &kp LALT
-                &kp SPACE    &kp F6     &kp G     &kp V
-                &kp F7       &kp F11    &kp F12
+                &kp F1       &kp T     &kp LALT   &kp SPACE
+                &kp F6       &kp G     &kp V      &kp F7      
+                &kp F5       &kp F11   &kp F12
             >;
         };
     };
 };
+
+
+
+
