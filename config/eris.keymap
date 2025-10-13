@@ -15,7 +15,7 @@
                 &kp LSHIFT   &kp Z      &kp X     &kp C
                 &kp LCTRL    &kp F2     &kp F3    &kp F4
                 &kp F1       &kp T      &kp LALT  &kp SPACE
-                &kp V        &kp G      &kp F6    &kp F7      
+                &kp F7       &kp V      &kp G     &kp F6      
                 &kp F5       &kp F11    &kp F12
             >;
         };
