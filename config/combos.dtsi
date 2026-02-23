@@ -12,18 +12,24 @@
             bindings = <&bt BT_CLR>;
         };
 
-        // Force USB mode + Switch to layer 4
+        // USB Mode:
+        // Select empty BT profile (1)
+        // Switch output to USB
+        // Go to layer 4
         force_usb_mode {
             timeout-ms = <50>;
-            key-positions = <0 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&out OUT_USB>, <&to 4>;
+            key-positions = <0 16>;
+            bindings = <&bt BT_SEL 1>, <&out OUT_USB>, <&to 4>;
         };
 
-        // Force BLE mode + Switch to layer 1
+        // Bluetooth Mode:
+        // Select paired profile (0)
+        // Switch output to BLE
+        // Go to layer 1
         force_bt_mode {
             timeout-ms = <50>;
-            key-positions = <1 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&out OUT_BLE>, <&to 1>;
+            key-positions = <1 16>;
+            bindings = <&bt BT_SEL 0>, <&out OUT_BLE>, <&to 1>;
         };
     };
 };
