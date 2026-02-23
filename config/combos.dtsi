@@ -12,11 +12,11 @@
             bindings = <&bt BT_CLR>;
         };
 
-        // Force USB mode + Switch to layer 10
+        // Force USB mode + Switch to layer 4
         force_usb_mode {
             timeout-ms = <50>;
             key-positions = <0 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&out OUT_USB>, <&to 10>;
+            bindings = <&out OUT_USB>, <&to 4>;
         };
 
         // Force BLE mode + Switch to layer 1
