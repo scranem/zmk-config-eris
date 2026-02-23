@@ -16,20 +16,14 @@
         force_usb_mode {
             timeout-ms = <50>;
             key-positions = <0 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <
-                &bt BT_ADV_OFF
-                &out OUT_USB
-            >;
+            bindings = <&bt BT_ADV_OFF>, <&out OUT_USB>;
         };
 
         // Force BLE mode + Enable BLE advertising
         force_bt_mode {
             timeout-ms = <50>;
             key-positions = <1 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <
-                &out OUT_BLE
-                &bt BT_ADV_ON
-            >;
+            bindings = <&out OUT_BLE>, <&bt BT_ADV_ON>;
         };
     };
 };
