@@ -12,18 +12,18 @@
             bindings = <&bt BT_CLR>;
         };
 
-        // Force USB mode + Disable BLE advertising
+        // Force USB mode + Switch to layer 10
         force_usb_mode {
             timeout-ms = <50>;
             key-positions = <0 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&bt BT_ADV_OFF>, <&out OUT_USB>;
+            bindings = <&out OUT_USB>, <&to 10>;
         };
 
-        // Force BLE mode + Enable BLE advertising
+        // Force BLE mode + Switch to layer 1
         force_bt_mode {
             timeout-ms = <50>;
             key-positions = <1 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&out OUT_BLE>, <&bt BT_ADV_ON>;
+            bindings = <&out OUT_BLE>, <&to 1>;
         };
     };
 };
