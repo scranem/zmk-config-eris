@@ -12,18 +12,24 @@
             bindings = <&bt BT_CLR>;
         };
 
-        // Forces the keyboard to output strictly over USB
+        // Force USB mode + Disable BLE advertising
         force_usb_mode {
             timeout-ms = <50>;
             key-positions = <0 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&out OUT_USB>;
+            bindings = <
+                &bt BT_ADV_OFF
+                &out OUT_USB
+            >;
         };
 
-        // Forces the keyboard to output strictly over Bluetooth
+        // Force BLE mode + Enable BLE advertising
         force_bt_mode {
             timeout-ms = <50>;
             key-positions = <1 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
-            bindings = <&out OUT_BLE>;
+            bindings = <
+                &out OUT_BLE
+                &bt BT_ADV_ON
+            >;
         };
     };
 };
