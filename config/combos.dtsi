@@ -1,13 +1,29 @@
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
- / {
-     combos {
-         compatible = "zmk,combos";
+/ {
+    combos {
+        compatible = "zmk,combos";
 
-         shift_esc_pair {
-             timeout-ms = <50>;
-             key-positions = <0 12>;
-             bindings = <&bt BT_CLR>;
-         };
-     };
- };
+        // Clears the current Bluetooth profile
+        shift_esc_pair {
+            timeout-ms = <50>;
+            key-positions = <0 12>;
+            bindings = <&bt BT_CLR>;
+        };
+
+        // Forces the keyboard to output strictly over USB
+        force_usb_mode {
+            timeout-ms = <50>;
+            key-positions = <0 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
+            bindings = <&out OUT_USB>;
+        };
+
+        // Forces the keyboard to output strictly over Bluetooth
+        force_bt_mode {
+            timeout-ms = <50>;
+            key-positions = <1 16>; /* CHANGE THESE TO YOUR PREFERRED KEYS */
+            bindings = <&out OUT_BLE>;
+        };
+    };
+};
