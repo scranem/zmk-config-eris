@@ -1,0 +1,93 @@
+/*
+ * Eris BLE split keyboard — shared devicetree for both halves.
+ *
+ * Controller: TENSTAR ROBOT nRF52840 "SuperMini" (red variant),
+ * flashed with the nice_nano_v2 board target.
+ *
+ * IMPORTANT — why raw &gpioX Y references instead of &pro_micro N:
+ * ZMK's nice_nano pro_micro map defines pin 14 -> P1.11 and pin 16 -> P0.10
+ * (the genuine nice!nano v2 routing). The TENSTAR SuperMini instead exposes
+ * the pins it labels D14 and D16 on P1.01 and P1.02. Using "&pro_micro 14/16"
+ * on this board would therefore drive the wrong physical pins and rows 7-8
+ * would be dead. Raw GPIO references remove that ambiguity for every pin.
+ *
+ * Pin map (identical wiring on both halves; TENSTAR labels -> nRF ports):
+ *   ROW1 = D6  = P1.00      COL1 = D9  = P1.06
+ *   ROW2 = D5  = P0.24      COL2 = D8  = P1.04
+ *   ROW3 = D4  = P0.22      COL3 = D7  = P0.11
+ *   ROW4 = D3  = P0.20      COL4 = D20 = P0.29
+ *   ROW5 = D2  = P0.17      COL5 = D21 = P0.31
+ *   ROW6 = D10 = P0.09
+ *   ROW7 = D16 = P1.02   <- differs from nice!nano v2 map
+ *   ROW8 = D14 = P1.01   <- differs from nice!nano v2 map
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+    };
+
+    /*
+     * Full split transform: 8 rows x 10 columns.
+     * Columns 0-4 = left half, columns 5-9 = right half
+     * (the right overlay applies col-offset = 5).
+     *
+     * The right PCB is a mirror of the left with the SAME electrical
+     * column numbering, so electrical COL1 is the OUTERMOST column on
+     * both halves. Reading the right half left-to-right (inner -> outer)
+     * therefore means its columns appear in reverse order: 9,8,7,6,5.
+     * If your right half comes out horizontally flipped when testing,
+     * simply reverse the right-side column order in each row below.
+     *
+     * 31 keys per half, 62 total.
+     */
+    default_transform: keymap_transform0 {
+        compatible = "zmk,matrix-transform";
+        columns = <10>;
+        rows = <8>;
+        map = <
+RC(0,0) RC(0,1)                                                                         RC(0,6) RC(0,5)
+RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4)                 RC(1,9) RC(1,8) RC(1,7) RC(1,6) RC(1,5)
+RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)                 RC(2,9) RC(2,8) RC(2,7) RC(2,6) RC(2,5)
+RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                 RC(3,8) RC(3,7) RC(3,6) RC(3,5)
+RC(4,0) RC(4,1) RC(4,2) RC(4,3)                                 RC(4,8) RC(4,7) RC(4,6) RC(4,5)
+RC(5,0) RC(5,1) RC(5,2) RC(5,3)                                 RC(5,8) RC(5,7) RC(5,6) RC(5,5)
+RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4)                 RC(6,9) RC(6,8) RC(6,7) RC(6,6) RC(6,5)
+        RC(7,1)                 RC(7,4)                 RC(7,9)                 RC(7,6)
+        >;
+    };
+
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        row-gpios
+            = <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW1  D6   P1.00 */
+            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW2  D5   P0.24 */
+            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW3  D4   P0.22 */
+            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW4  D3   P0.20 */
+            , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW5  D2   P0.17 */
+            , <&gpio0 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW6  D10  P0.09 */
+            , <&gpio1 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW7  D16  P1.02 (TENSTAR-specific) */
+            , <&gpio1 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW8  D14  P1.01 (TENSTAR-specific) */
+            ;
+
+        col-gpios
+            = <&gpio1 6  GPIO_ACTIVE_HIGH>                      /* COL1  D9   P1.06 */
+            , <&gpio1 4  GPIO_ACTIVE_HIGH>                      /* COL2  D8   P1.04 */
+            , <&gpio0 11 GPIO_ACTIVE_HIGH>                      /* COL3  D7   P0.11 */
+            , <&gpio0 29 GPIO_ACTIVE_HIGH>                      /* COL4  D20  P0.29 */
+            , <&gpio0 31 GPIO_ACTIVE_HIGH>                      /* COL5  D21  P0.31 */
+            ;
+    };
+};

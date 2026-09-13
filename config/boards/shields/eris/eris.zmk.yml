@@ -1,0 +1,10 @@
+file_format: "1"
+id: eris
+name: Eris
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - eris_left
+  - eris_right

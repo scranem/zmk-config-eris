@@ -1,0 +1,13 @@
+/*
+ * Eris — RIGHT half (split PERIPHERAL).
+ * Mirrored PCB with the same controller pin assignment as the left half.
+ * The column offset maps this half's 5 electrical columns onto transform
+ * columns 5-9; the mirroring itself is handled by the column order in the
+ * transform map (see eris.dtsi).
+ */
+
+#include "eris.dtsi"
+
+&default_transform {
+    col-offset = <5>;
+};

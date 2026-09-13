@@ -1,0 +1,7 @@
+/*
+ * Eris — LEFT half (split CENTRAL, host-facing).
+ * All matrix pins are shared between halves and live in eris.dtsi.
+ * The central role is assigned via Kconfig (ZMK_SPLIT_ROLE_CENTRAL).
+ */
+
+#include "eris.dtsi"

@@ -1,6 +1,22 @@
-if SHIELD_ERIS
+# Eris BLE split keyboard — role configuration
+#
+# LEFT  = central (host-facing half; runs the keymap, talks to the computer)
+# RIGHT = peripheral (sends its key events to the left half over BLE)
 
+if SHIELD_ERIS_LEFT
+
+# Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "eris"
+    default "Eris"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_ERIS_LEFT || SHIELD_ERIS_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif

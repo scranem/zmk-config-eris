@@ -10,5 +10,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk-locales
+      url: https://github.com/joelspadin/zmk-locales
+      revision: main
+
   self:
     path: config
