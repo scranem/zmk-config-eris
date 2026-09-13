@@ -61,8 +61,8 @@
             display-name = "Toggle 1";
             bindings = <
 &trans        &trans                                                                                		&kp ES_IQMARK &kp KP_DIVIDE
-&kp ES_ORDM   &kp KP_N1     &kp KP_N2     &kp KP_N3     &COMMA        &kp KP_PLUS   &kp LBRC      &kp RBRC      &kp AT        &kp HASH
-&trans        &kp KP_N4     &kp KP_N5     &kp KP_N6     &DOT          &kp MINUS     &kp LPAR      &kp RPAR      &kp DLLR      &kp EQUAL
+&kp ES_ORDM   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp COMMA     &kp KP_PLUS   &kp LBRC      &kp RBRC      &kp AT        &kp HASH
+&trans        &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp DOT       &kp MINUS     &kp LPAR      &kp RPAR      &kp DLLR      &kp EQUAL
 &trans        &kp KP_N7     &kp KP_N8     &kp KP_N9                                 &kp LBKT      &kp RBKT      &kp AMPS      &kp LT
 &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &kp PRCNT
 &trans        &kp KP_N0     &trans        &trans                                    &trans        &trans        &trans        &trans
