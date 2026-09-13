@@ -14,9 +14,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: eris_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: eris_right
   # Utility firmware: flash to a half to wipe its BLE bonds/settings if the
   # two halves ever refuse to pair with each other, then re-flash its normal
