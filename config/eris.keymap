@@ -94,7 +94,7 @@
 &trans        &trans        &trans        &trans                                    &to 0         &to 0         &to 0         &to 0 
 &trans        &kp F2        &kp F3        &kp F4                                    &to 0         &to 0         &to 0         &to 0 
 &kp F1        &trans        &trans        &trans                                    &to 0         &to 0         &to 0         &to 0 
-&trans        &kp H         &trans        &trans        &kp Y         &to 0         &to 0         &to 0         &to 0         &to 0 
+&trans        &kp Y         &trans        &trans        &kp Y         &to 0         &to 0         &to 0         &to 0         &to 0 
               &kp B                   			&kp F5        &to 0                			&to 0 
             >;
         };
