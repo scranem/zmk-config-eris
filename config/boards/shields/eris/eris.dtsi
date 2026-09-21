@@ -78,8 +78,8 @@ RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4)                 RC(6,9) RC(6,8) RC(6,7) 
             , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW4  D3   P0.20 */
             , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW5  D2   P0.17 */
             , <&gpio0 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW6  D10  P0.09 */
-            , <&gpio1 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW7  D16  P1.02 (TENSTAR-specific) */
-            , <&gpio1 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW8  D14  P1.01 (TENSTAR-specific) */
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW7  D16  P0.10 */
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* ROW8  D14  P1.11 */
             ;
 
         col-gpios
