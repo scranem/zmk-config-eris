@@ -46,7 +46,7 @@
         default_layer {
             display-name = "Default";
             bindings = <
-&kp ESC       &kp BSPC                                                                                 		&kp APOS       &kp EXCL
+&kp ESC       &kp BSPC                                                                                 		&kp ES_APOS    &kp KP_DIVIDE
 &kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U         &kp I         &kp O          &kp P
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J         &kp K         &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B         &kp N         &kp M          &kp COMMA
@@ -60,13 +60,13 @@
         toggle1_layer {
             display-name = "Toggle 1";
             bindings = <
-&trans        &trans                                                                                		&kp ES_IQMARK &kp KP_DIVIDE
+&trans        &trans                                                                                		&kp ES_IQMARK &kp EXCL
 &kp ES_ORDM   &kp N1        &kp N2        &kp N3        &kp COMMA     &kp ES_PLUS   &kp ES_LBRC   &kp ES_RBRC   &kp ES_AT     &kp ES_HASH
 &trans        &kp N4        &kp N5        &kp N6        &kp DOT       &kp ES_MINUS  &kp ES_LPAR   &kp ES_RPAR   &kp DLLR      &kp ES_EQUAL
 &trans        &kp N7        &kp N8        &kp N9                                    &kp ES_LBKT   &kp ES_RBKT   &kp ES_AMPS   &kp ES_LT
-&trans        &none         &none         &none                                     &none         &none         &none         &kp PRCNT
-&none         &none         &kp N0        &trans                                    &trans        &trans        &trans        &none 
-&trans        &to 2         &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans                                    &none         &none         &none         &kp PRCNT
+&to 0         &none         &kp N0        &trans                                    &trans        &trans        &trans        &to 0 
+&trans        &to 2         &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        &to 2         &trans        &trans
               &trans                                    &none         &to 3                                     &trans
             >;
         };
@@ -78,10 +78,10 @@
 &trans        &none         &none         &none         &kp HOME      &none         &kp F1        &kp F2        &kp F3        &none  
 &trans        &kp PG_UP     &kp UP        &kp PG_DN     &kp END       &none 	    &kp F4        &kp F5        &kp F6        &none   
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp F7        &kp F8        &kp F9        &none   
-&trans        &none         &none         &none                                     &kp F10       &kp F11       &kp F12       &none   
-&none         &none         &none         &trans                                    &trans        &trans        &none         &none    
-&none         &to 0         &none         &none         &none         &none         &trans        &to 0         &trans        &trans   
-              &trans                                    &none         &none                      		&none   
+&trans        &trans        &trans        &trans                                    &kp F10       &kp F11       &kp F12       &none   
+&to 0         &none         &none         &trans                                    &trans        &trans        &none         &to 0    
+&trans        &to 0         &none         &none         &to 1         &to 1         &trans        &to 0         &trans        &trans   
+              &trans                                    &none         &to 3                      		&none   
             >;
         };
 
