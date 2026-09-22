@@ -46,14 +46,14 @@
         default_layer {
             display-name = "Default";
             bindings = <
-&kp ESC       &kp DEL                                                                                 		&kp QMARK      &kp APOS
+&kp ESC       &kp DEL                                                                                 		&kp ES_QMARK   &kp APOS
 &kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U         &kp I         &kp O          &kp P
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J         &kp K         &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B         &kp N         &kp M          &kp DOT
 &kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp F11       &kp F12       &kp PSCRN      &kp COMMA
-&kp F1        &kp F12       &kp T         &kp LALT                                  &kp ENTER     &kp LALT      &kp SPACE      &kp F2
-&kp SPACE     &kp Y         &kp G         &kp V         &to 1         &to 1         &to 2         &kp BSPC      &kp SQT        &kp LGUI
-              &kp LGUI                                  &to 3         &to 3                                     &kp F12
+&kp F1        &kp F12       &kp T         &kp LALT                                  &kp LALT      &kp ENTER     &kp F12        &kp F2
+&kp SPACE     &kp Y         &kp G         &kp V         &to 1         &to 1         &to 2         &kp F11       &kp SQT        &kp SPACE
+              &kp LGUI                                  &to 3         &to 3                                     &to 2
             >;
         };
 
