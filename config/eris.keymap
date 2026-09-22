@@ -49,11 +49,11 @@
 &kp ESC       &kp DEL                                                                                 		&kp ES_QMARK   &kp APOS
 &kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U         &kp I         &kp O          &kp P
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J         &kp K         &kp L          &kp ES_N_TILDE
-&kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B         &kp N         &kp M          &kp DOT
-&kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp F11       &kp F12       &kp PSCRN      &kp COMMA
+&kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B         &kp N         &kp M          &kp COMMA
+&kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp F11       &kp F12       &kp PSCRN      &kp DOT
 &kp F1        &kp F12       &kp T         &kp LALT                                  &kp LALT      &kp ENTER     &kp F12        &kp F2
-&kp SPACE     &kp Y         &kp G         &kp V         &to 1         &to 1         &to 2         &kp F11       &kp SQT        &kp SPACE
-              &kp LGUI                                  &to 3         &to 3                                     &to 2
+&kp SPACE     &to 2         &kp G         &kp V         &to 1         &to 1         &kp BSPC      &to 2         &kp LGUI       &kp SPACE
+              &kp LGUI                                  &to 3         &to 3                                     &kp F10
             >;
         };
 
@@ -61,11 +61,11 @@
             display-name = "Toggle 1";
             bindings = <
 &trans        &trans                                                                                		&kp ES_IQMARK &kp KP_DIVIDE
-&kp ES_ORDM   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp COMMA     &kp KP_PLUS   &kp LBRC      &kp RBRC      &kp AT        &kp HASH
-&trans        &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp DOT       &kp MINUS     &kp LPAR      &kp RPAR      &kp DLLR      &kp EQUAL
-&trans        &kp KP_N7     &kp KP_N8     &kp KP_N9                                 &kp LBKT      &kp RBKT      &kp AMPS      &kp LT
+&kp ES_ORDM   &kp N1        &kp N2        &kp N3        &kp COMMA     &kp KP_PLUS   &kp ES_LBRC   &kp ES_RBRC   &kp AT        &kp HASH
+&trans        &kp N4        &kp N5        &kp N6        &kp DOT       &kp MINUS     &kp ES_LPAR   &kp ES_RPAR   &kp DLLR      &kp EQUAL
+&trans        &kp N7        &kp N8        &kp N9                                    &kp ES_LBKT   &kp ES_RBKT   &kp AMPS      &kp LT
 &trans        &none         &none         &none                                     &none         &none         &none         &kp PRCNT
-&none         &kp KP_N0     &trans        &trans                                    &trans        &trans        &trans        &none 
+&none         &kp N0        &trans        &trans                                    &trans        &trans        &trans        &none 
 &trans        &kp ENTER     &kp BSPC      &trans        &to 0         &to 0         &trans        &trans        &trans        &trans
               &trans                                    &none         &to 3                                     &trans
             >;
