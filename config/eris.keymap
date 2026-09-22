@@ -38,6 +38,18 @@
 #include <dt-bindings/zmk/bt.h>
 #include <locale/keys_es.h>
 #include "combos.dtsi"
+#define MO_TOG(layer) &mo_tog layer layer
+
+/ {
+    behaviors {
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
+    };
 
 / {
     keymap {
@@ -51,8 +63,8 @@
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J         &kp K         &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B         &kp N         &kp M          &kp COMMA
 &kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp F11       &kp F12       &kp PSCRN      &kp DOT
-&kp F1        &kp F12       &kp T         &kp LALT                                  &kp LALT      &kp ENTER     &kp F12        &kp F2
-&kp SPACE     &to 2         &kp G         &kp V         &to 1         &to 1         &kp DEL       &to 2         &kp LGUI       &kp SPACE
+&kp F22       &kp F12       &kp T         &kp LALT                                  &kp LALT      &kp ENTER     &kp F12        &kp F23
+&kp SPACE     MO_TOG(2)     &kp G         &kp V         MO_TOG(1)     MO_TOG(1)     &kp DEL       MO_TOG(2)     &kp LGUI       &kp SPACE
               &kp LGUI                                  &kp F11       &to 3                                     &kp ES_ACUTE
             >;
         };
@@ -66,7 +78,7 @@
 &trans        &kp N7        &kp N8        &kp N9                                    &kp ES_LBKT   &kp ES_RBKT   &kp ES_AMPS   &kp ES_LT
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &kp PRCNT
 &to 0         &none         &kp N0        &trans                                    &trans        &trans        &trans        &to 0 
-&trans        &to 2         &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        &to 2         &trans        &trans
+&trans        MO_TOG(2)     &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        MO_TOG(2)     &trans        &trans
               &trans                                    &none         &to 3                                     &trans
             >;
         };
@@ -80,7 +92,7 @@
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp F7        &kp F8        &kp F9        &none   
 &trans        &trans        &trans        &trans                                    &kp F10       &kp F11       &kp F12       &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &to 0    
-&trans        &to 0         &none         &none         &to 1         &to 1         &trans        &to 0         &trans        &trans   
+&trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &trans        &to 0         &trans        &trans   
               &trans                                    &none         &to 3                      		&none   
             >;
         };
