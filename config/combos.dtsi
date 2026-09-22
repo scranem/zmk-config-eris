@@ -53,21 +53,21 @@
         /* ESC (0) + LSHIFT (24): clear the current Bluetooth profile */
         shift_esc_pair {
             timeout-ms = <50>;
-            key-positions = <0 24>;
+            key-positions = <4 32>;
             bindings = <&bt BT_CLR>;
         };
 
         /* ESC (0) + LCTRL (32): force USB mode */
         force_usb_mode {
             timeout-ms = <50>;
-            key-positions = <0 32>;
+            key-positions = <1 32>;
             bindings = <&usb_mode>;
         };
 
         /* BSPC (1) + LCTRL (32): force Bluetooth mode */
         force_bt_mode {
             timeout-ms = <50>;
-            key-positions = <1 32>;
+            key-positions = <0 32>;
             bindings = <&bt_mode>;
         };
     };
