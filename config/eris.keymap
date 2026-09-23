@@ -52,7 +52,7 @@
     };
 
     macros {
-        game_layer: game_layer {
+  	  mg: macro_game {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -62,7 +62,7 @@
                 ;
         };
 
-        default_layer: default_layer {
+        md: macro_default {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -87,7 +87,7 @@
 &kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp F11       &kp PAUSE_BREAK &kp PSCRN      &kp DOT
 &kp F21       &kp F12       &kp T         &kp LALT                                  &kp LALT      &kp ENTER       &kp F12        &default_layer
 &kp SPACE     MO_TOG(2)     &kp G         &kp V         MO_TOG(1)     MO_TOG(1)     &kp DEL       MO_TOG(2)       &kp LGUI       &kp SPACE
-              &kp LGUI                                  &kp F11       &game_layer                                 &kp ES_ACUTE
+              &kp LGUI                                  &kp F11       &mg                                         &kp ES_ACUTE
             >;
         };
 
@@ -101,7 +101,7 @@
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &kp PRCNT
 &to 0         &none         &kp N0        &trans                                    &trans        &trans        &trans        &default_layer
 &trans        MO_TOG(2)     &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        MO_TOG(2)     &trans        &trans
-              &trans                                    &none         &game_layer                               &trans
+              &trans                                    &none         &mg                                       &trans
             >;
         };
 
@@ -115,21 +115,21 @@
 &trans        &trans        &trans        &trans                                    &kp F10       &kp F11       &kp F12       &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &default_layer
 &trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &trans        &to 0         &trans        &trans   
-              &trans                                    &none         &game_layer                		&none   
+              &trans                                    &none         &mg                       		&none   
             >;
         };
 
         toggle3_layer {
             display-name = "Toggle 3";
             bindings = <
-&trans        &trans                                                                                            &to 0         &to 0 
-&trans        &trans        &trans        &trans        &trans        &to 0         &to 0         &to 0         &to 0         &to 0 
-&trans        &trans        &trans        &trans        &trans        &to 0         &kp F23       &to 0         &to 0         &to 0 
-&trans        &trans        &trans        &trans                                    &to 0         &to 0         &to 0         &to 0 
-&trans        &kp F2        &kp F3        &kp F4                                    &to 0         &to 0         &to 0         &to 0 
-&kp F1        &trans        &trans        &trans                                    &to 0         &to 0         &to 0         &default_layer 
-&trans        &kp H         &trans        &trans        &kp Y         &to 0         &to 0         &to 0         &to 0         &to 0 
-              &kp B                   			&kp F5        &kp F22            			&to 0 
+&trans        &trans                                                                                            &md           &md 
+&trans        &trans        &trans        &trans        &trans        &md           &md           &md           &md           &md 
+&trans        &trans        &trans        &trans        &trans        &md           &md           &md           &md           &md 
+&trans        &trans        &trans        &trans                                    &md           &md           &md           &md 
+&trans        &kp F2        &kp F3        &kp F4                                    &md           &md           &md           &md 
+&kp F1        &trans        &trans        &trans                                    &md           &md           &md           &md 
+&trans        &kp H         &trans        &trans        &kp Y         &md           &md           &md           &md           &md 
+              &kp B                   			&kp F5        &kp F22            			&md   
             >;
         };
 
