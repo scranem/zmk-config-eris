@@ -52,7 +52,7 @@
     };
 
     macros {
-  	  mg: macro_game {
+        mg: macro_game {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -71,6 +71,28 @@
                 , <&to 0>
                 ;
         };
+
+        back: macro_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings
+                = <&kp LALT>
+                , <&kp LEFT>
+                , <&kp LALT>
+                ;
+        };
+
+        forward: macro_forward {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings
+                = <&kp LALT>
+                , <&kp RIGHT>
+                , <&kp LALT>
+                ;
+        };
     };
 
     keymap {
@@ -84,7 +106,7 @@
 &kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U         &kp I           &kp O          &kp P
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J         &kp K           &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B         &kp N           &kp M          &kp COMMA
-&kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp F11       &kp PAUSE_BREAK &kp PSCRN      &kp DOT
+&kp LCTRL     &kp F6        &kp F5        &kp F4                                    &back         &kp PAUSE_BREAK &kp PSCRN      &kp DOT
 &kp F21       &kp F12       &kp T         &kp LALT                                  &kp LALT      &kp ENTER       &kp F12        &kp F23
 &kp SPACE     MO_TOG(2)     &kp G         &kp V         MO_TOG(1)     MO_TOG(1)     &kp DEL       MO_TOG(2)       &kp LGUI       &kp SPACE
               &kp LGUI                                  &kp F11       &mg                                         &kp ES_ACUTE
