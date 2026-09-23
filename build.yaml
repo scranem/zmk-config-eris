@@ -14,12 +14,9 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: eris_left
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: eris_right
-  # Utility firmware: flash to a half to wipe its BLE bonds/settings if the
-  # two halves ever refuse to pair with each other, then re-flash its normal
-  # eris_left / eris_right firmware.
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: settings_reset
