@@ -80,13 +80,13 @@
             display-name = "Default";
             bindings = <
 
-&kp ESC       &kp ES_ACUTE                                                                      		  &kp ES_APOS    &kp KP_DIVIDE
+&kp ESC       &kp ES_ACUTE                                                                      	     	   &kp ES_APOS    &kp KP_DIVIDE
 &kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U          &kp I           &kp O          &kp P
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J          &kp K           &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B          &kp N           &kp M          &kp COMMA
 &kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp C_AC_BACK  &kp PAUSE_BREAK &kp PSCRN      &kp DOT
 &kp F21       &kp F12       &kp T         &kp LALT                                  &kp LALT       &kp ENTER       &kp F12        &kp F23
-&kp SPACE     MO_TOG(2)     &kp G         &kp V         MO_TOG(1)     MO_TOG(1)     &kp SPACE      MO_TOG(2)       &kp LGUI       &kp BSPC
+&kp SPACE     MO_TOG(2)     &kp G         &kp V         MO_TOG(1)     MO_TOG(1)     MO_TOG(4)      MO_TOG(2)       &kp LGUI       &kp BSPC
               &kp LGUI                                  &kp F11       &mg                                          &kp DEL
             >;
         };
@@ -111,13 +111,13 @@
             display-name = "Toggle 2";
             bindings = <
 &trans        &trans                                                                                            &none         &none 
-&trans        &none         &none         &none         &kp HOME      &none         &kp F1        &kp F2        &kp F3        &none  
-&trans        &kp LEFT      &kp UP        &kp RIGHT     &kp END       &none 	    &kp F4        &kp F5        &kp F6        &none   
-&trans        &kp PG_UP     &kp DOWN      &kp PG_DN                                 &kp F7        &kp F8        &kp F9        &none   
-&trans        &trans        &trans        &trans                                    &kp F10       &kp F11       &kp F12       &none   
+&trans        &none         &none         &none         &kp HOME      &none         &none         &none         &none         &none  
+&trans        &kp LEFT      &kp UP        &kp RIGHT     &kp END       &none 	    &kp LEFT      &kp UP        &kp RIGHT     &none   
+&trans        &kp PG_UP     &kp DOWN      &kp PG_DN                                 &kp PG_UP     &kp DOWN      &kp PG_DN     &none   
+&trans        &trans        &trans        &trans                                    &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
 &trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &trans        &to 0         &trans        &trans   
-              &trans                                    &none         &mg                       		&none   
+              &trans                                    &none         &mg                       		&trans  
             >;
         };
 
@@ -135,17 +135,17 @@
             >;
         };
 
-        usb_mode_layer {
-            display-name = "USB";
+        toggle4_layer {
+            display-name = "Toggle 4";
             bindings = <
-&trans        &trans                                                                                            &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans                      &trans                      &trans                      &trans
+&trans        &trans                                                                                            &none         &none 
+&trans        &none         &none         &none         &none         &none         &none         &none         &none         &none  
+&trans        &kp F1        &kp F2        &kp F3        &none         &none 	    &kp F7        &kp F8        &kp F9        &none   
+&trans        &kp F4        &kp F5        &kp F6                                    &kp F10       &kp F11       &kp F12       &none   
+&trans        &none         &none         &none                                     &none         &none         &none         &none   
+&to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
+&trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &to 0         &to 0         &trans        &trans   
+              &trans                                    &none         &mg                       		&trans  
             >;
         };
     };
