@@ -112,8 +112,8 @@
             bindings = <
 &trans        &trans                                                                                            &none         &none 
 &trans        &none         &none         &none         &kp HOME      &none         &none         &none         &none         &none  
-&trans        &kp LEFT      &kp UP        &kp RIGHT     &kp END       &none 	    &kp LEFT      &kp UP        &kp RIGHT     &none   
-&trans        &kp PG_UP     &kp DOWN      &kp PG_DN                                 &kp PG_UP     &kp DOWN      &kp PG_DN     &none   
+&trans        &kp PG_UP     &kp UP        &kp PG_DN     &kp END       &none 	    &kp PG_DN     &kp UP        &kp PG_UP     &none   
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp LEFT      &kp DOWN      &kp RIGHT     &none   
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
 &trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &trans        &to 0         &trans        &trans   
