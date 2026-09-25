@@ -102,7 +102,7 @@
 &trans        &kp N7        &kp N8        &kp N9                                    &kp ES_LBKT   &kp ES_RBKT   &kp DLLR      &kp ES_LT
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &kp PRCNT
 &to 0         &none         &kp N0        &trans                                    &trans        &trans        &trans        &md
-&trans        MO_TOG(2)     &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        MO_TOG(2)     &trans        &trans
+&trans        &trans        &kp ENTER     &kp BSPC      &to 0         &to 0         &trans        &trans        &trans        &trans
               &trans                                    &none         &mg                                       &kp ES_CARET
             >;
         };
@@ -116,7 +116,7 @@
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp LEFT      &kp DOWN      &kp RIGHT     &none   
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
-&trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &trans        &to 0         &trans        &trans   
+&trans        &to 0         &none         &none         &trans        &trans        &trans        &to 0         &trans        &trans   
               &trans                                    &none         &mg                       		&trans  
             >;
         };
@@ -144,7 +144,7 @@
 &trans        &kp F4        &kp F5        &kp F6                                    &kp F10       &kp F11       &kp F12       &none   
 &trans        &none         &none         &none                                     &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
-&trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     &to 0         &to 0         &trans        &trans   
+&trans        &trans        &none         &none         &trans        &trans        &to 0         &trans        &trans        &trans   
               &trans                                    &none         &mg                       		&trans  
             >;
         };
