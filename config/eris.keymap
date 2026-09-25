@@ -85,9 +85,9 @@
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J          &kp K           &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B          &kp N           &kp M          &kp COMMA
 &kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp C_AC_BACK  &kp PAUSE_BREAK &kp PSCRN      &kp DOT
-&kp F21       &none         &kp T         &kp LALT                                  &kp LALT       &kp ENTER       &none          &kp F23
-&kp SPACE     MO_TOG(2)     &kp G         &kp V         MO_TOG(1)     MO_TOG(1)     MO_TOG(4)      MO_TOG(2)       &kp LGUI       &kp BSPC
-              &kp LGUI                                  &kp F11       &mg                                          &kp DEL
+&kp F21       &none         &kp T         &kp LALT                                  MO_TOG(4)      &kp ENTER       &none          &kp F23
+&kp SPACE     MO_TOG(2)     MO_TOG(4)     &kp V         MO_TOG(1)     MO_TOG(1)     &kp DEL        MO_TOG(2)       &kp LGUI       &kp BSPC
+              &kp LGUI                                  &kp F11       &mg                                          &kp G
             >;
         };
 
@@ -116,7 +116,7 @@
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp LEFT      &kp DOWN      &kp RIGHT     &none   
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
-&trans        &to 0         &none         &none         MO_TOG(1)     MO_TOG(1)     MO_TOG(4)     &to 0         &trans        &trans   
+&trans        &to 0         MO_TOG(4)     &none         MO_TOG(1)     MO_TOG(1)     MO_TOG(4)     &to 0         &trans        &trans   
               &trans                                    &none         &mg                       		&kp DEL 
             >;
         };
@@ -130,7 +130,7 @@
 &trans        &trans        &trans        &trans                                    &md           &md           &md           &md 
 &trans        &kp F2        &kp F3        &kp F4                                    &md           &md           &md           &md 
 &kp F1        &none         &trans        &trans                                    &md           &md           &md           &md 
-&trans        &kp H         &trans        &trans        &kp Y         &md           &md           &md           &md           &md 
+&trans        &kp H         &kp G         &trans        &kp Y         &md           &md           &md           &md           &md 
               &kp B                   			&kp F5        &kp F22            			&md   
             >;
         };
@@ -144,7 +144,7 @@
 &trans        &kp F4        &kp F5        &kp F6                                    &kp F10       &kp F11       &kp F12       &none   
 &trans        &none         &none         &none                                     &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
-&trans        MO_TOG(2)     &none         &none         MO_TOG(1)     MO_TOG(1)     &to 0         MO_TOG(2)     &trans        &trans   
+&trans        MO_TOG(2)     &to 0         &none         MO_TOG(1)     MO_TOG(1)     &to 0         MO_TOG(2)     &trans        &trans   
               &trans                                    &none         &mg                       		&kp DEL  
             >;
         };
