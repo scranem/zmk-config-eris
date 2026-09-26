@@ -116,7 +116,7 @@
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp LEFT      &kp DOWN      &kp RIGHT     &none   
 &trans        &trans        &trans        &trans                                    &none         &none         &none         &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
-&trans        &to 0         MO_TOG(4)     &none         MO_TOG(1)     MO_TOG(1)     MO_TOG(4)     &to 0         &trans        &trans   
+&trans        &to 0         MO_TOG(4)     &none         &to 1         &to 1         MO_TOG(4)     &to 0         &trans        &trans   
               &trans                                    &none         &mg                       		&kp DEL 
             >;
         };
