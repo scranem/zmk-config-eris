@@ -85,9 +85,9 @@
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J          &kp K           &kp L          &kp ES_N_TILDE
 &kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B          &kp N           &kp M          &kp COMMA
 &kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp C_AC_BACK  &kp PAUSE_BREAK &kp PSCRN      &kp DOT
-&kp F21       &none         &kp T         &kp LALT                                  &kp LGUI        &kp ENTER       &none          &kp F23
-&kp SPACE     MO_TOG(2)     MO_TOG(4)     &kp LGUI       MO_TOG(1)     MO_TOG(1)     MO_TOG(4)      MO_TOG(2)       &kp G          &kp BSPC
-              &kp V                                     &kp F11       &mg                                          &kp DEL
+&kp F21       &none         &kp T         &kp LALT                                  &kp DEL        &kp ENTER       &none          &kp F23
+&kp SPACE     MO_TOG(2)     MO_TOG(4)     &kp LGUI       MO_TOG(1)     MO_TOG(1)    MO_TOG(4)      MO_TOG(2)       &kp G          &kp BSPC
+              &kp V                                     &kp F11       &mg                                          &kp LGUI
             >;
         };
 
