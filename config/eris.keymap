@@ -80,13 +80,13 @@
             display-name = "Default";
             bindings = <
 
-&kp ESC       &kp ES_ACUTE                                                                      	     	   &kp ES_APOS    &kp KP_DIVIDE
-&kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U          &kp I           &kp O          &kp P
-&kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J          &kp K           &kp L          &kp ES_N_TILDE
-&kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B          &kp N           &kp M          &kp COMMA
-&kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp C_AC_BACK  &kp PAUSE_BREAK &kp PSCRN      &kp DOT
-&kp F21       &none         &kp T         &kp LALT                                  &kp LALT       &kp ENTER       &none          &kp F23
-&kp SPACE     MO_TOG(2)     MO_TOG(4)     &kp LGUI       MO_TOG(1)     MO_TOG(1)    MO_TOG(4)      MO_TOG(2)       &kp G          &kp BSPC
+&kp ESC       &kp ES_ACUTE                                                                      	     	   &kp ES_APOS       &kp KP_DIVIDE
+&kp CAPSLOCK  &kp Q         &kp W         &kp E         &kp R         &kp Y         &kp U          &kp I           &kp O             &kp P
+&kp TAB       &kp A         &kp S         &kp D         &kp F         &kp H         &kp J          &kp K           &kp L             &kp ES_N_TILDE
+&kp LSHIFT    &kp Z         &kp X         &kp C                                     &kp B          &kp N           &kp M             &kp COMMA
+&kp LCTRL     &kp F6        &kp F5        &kp F4                                    &kp C_AC_BACK  &kp PAUSE_BREAK &kp C_AC_FORWARD  &kp DOT
+&kp F21       &none         &kp T         &kp LALT                                  &kp LALT       &kp ENTER       &none             &kp F23
+&kp SPACE     MO_TOG(2)     MO_TOG(4)     &kp LGUI       MO_TOG(1)     MO_TOG(1)    MO_TOG(4)      MO_TOG(2)       &kp G             &kp BSPC
               &kp V                                      &kp F11       &mg                                         &kp DEL
             >;
         };
@@ -100,7 +100,7 @@
 &kp ES_ORDM   &kp N1        &kp N2        &kp N3        &kp COMMA     &kp ES_PLUS   &kp ES_LBRC   &kp ES_RBRC   &kp ES_HASH   &kp ES_EQUAL
 &trans        &kp N4        &kp N5        &kp N6        &kp DOT       &kp ES_MINUS  &kp ES_LPAR   &kp ES_RPAR   &kp ES_AMPS   &kp ES_AT
 &trans        &kp N7        &kp N8        &kp N9                                    &kp ES_LBKT   &kp ES_RBKT   &kp DLLR      &kp ES_LT
-&trans        &trans        &trans        &trans                                    &none         &none         &none         &kp PRCNT
+&trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &kp PRCNT
 &to 0         &none         &kp ENTER     &trans                                    &trans        &trans        &none         &md
 &trans        MO_TOG(2)     MO_TOG(4)     &trans        &to 0         &to 0         MO_TOG(4)     MO_TOG(2)     &kp ES_CARET  &trans
               &kp N0                                    &none         &mg                                       &trans
@@ -114,7 +114,7 @@
 &kp CAPSLOCK  &none         &none         &none         &kp HOME      &kp HOME      &none         &none         &none         &none  
 &trans        &kp PG_UP     &kp UP        &kp PG_DN     &kp END       &kp END 	    &kp PG_DN     &kp UP        &kp PG_UP     &none   
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT                                 &kp LEFT      &kp DOWN      &kp RIGHT     &none   
-&trans        &trans        &trans        &trans                                    &none         &none         &none         &none   
+&trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
 &trans        &to 0         MO_TOG(4)     &trans        &to 1         &to 1         MO_TOG(4)     &to 0         &none         &trans   
               &none                                     &trans        &mg                       		&trans 
@@ -142,7 +142,7 @@
 &kp CAPSLOCK  &none         &none         &none         &none         &none         &none         &none         &none         &none  
 &trans        &kp F1        &kp F2        &kp F3        &none         &none 	    &kp F7        &kp F8        &kp F9        &none   
 &trans        &kp F4        &kp F5        &kp F6                                    &kp F10       &kp F11       &kp F12       &none   
-&trans        &none         &none         &none                                     &none         &none         &none         &none   
+&trans        &none         &none         &none                                     &trans        &trans        &trans        &none   
 &to 0         &none         &none         &trans                                    &trans        &trans        &none         &md
 &trans        MO_TOG(2)     &to 0         &trans        &to 1         &to 1         &to 0         &to 2         &none         &trans   
               &none                                     &none         &mg                       		&trans  
