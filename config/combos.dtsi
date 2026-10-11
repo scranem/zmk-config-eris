@@ -2,17 +2,9 @@
  * Eris — combos and mode macros.
  *
  * Key positions were re-indexed for the 62-key split transform.
- * The combo keys are the same PHYSICAL keys as before (all on the left half):
  *
- *   old single-half index -> new split index
- *   ESC     (R1C1):  0  ->  0
- *   BSPC    (R1C2):  1  ->  1
- *   LSHIFT  (R4C1): 12  -> 24
- *   LCTRL   (R5C1): 16  -> 32
- *
- * NOTE: a ZMK combo can only trigger ONE behavior. The old file listed three
- * bindings per mode combo, but only the first one actually ran. The intended
- * three-step sequences are now wrapped in macros so all steps really execute.
+ * NOTE: A ZMK combo can only trigger ONE behavior. Multi-step sequences
+ * are wrapped in macros so all steps execute.
  */
 
 #include <dt-bindings/zmk/bt.h>
@@ -22,9 +14,9 @@
     macros {
         /*
          * USB mode:
-         *  1. select the intentionally empty BT profile (1)
-         *  2. switch output to USB
-         *  3. go to layer 4 (USB-mode layer)
+         * 1. Select the intentionally empty BT profile (1)
+         * 2. Switch output to USB
+         * 3. Go to layer 4
          */
         usb_mode: usb_mode {
             compatible = "zmk,behavior-macro";
@@ -34,56 +26,85 @@
 
         /*
          * Bluetooth mode:
-         *  1. select the paired BT profile (0)
-         *  2. switch output to BLE
-         *  3. go to layer 1 (kept for compatibility with the old workflow;
-         *     layer 1 is transparent on the left half, so typing there is
-         *     unaffected)
+         * 1. Select paired BT profile (0)
+         * 2. Switch output to BLE
+         * 3. Go to layer 1
          */
         bt_mode: bt_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0>, <&out OUT_BLE>, <&to 1>;
         };
+
+        /*
+         * Windows virtual desktop RIGHT:
+         * Win + Ctrl + Right
+         */
+        desktop_right: desktop_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>;
+        };
+
+        /*
+         * Windows virtual desktop LEFT:
+         * Win + Ctrl + Left
+         */
+        desktop_left: desktop_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        /* ESC (0) + LSHIFT (24): clear the current Bluetooth profile */
+        /* Clear current Bluetooth profile */
         shift_esc_pair {
             timeout-ms = <50>;
             key-positions = <4 32>;
             bindings = <&bt BT_CLR>;
         };
 
-        /* ESC (0) + LCTRL (32): force USB mode */
+        /* Force USB mode */
         force_usb_mode {
             timeout-ms = <50>;
             key-positions = <1 32>;
             bindings = <&usb_mode>;
         };
 
-        /* BSPC (1) + LCTRL (32): force Bluetooth mode */
+        /* Force Bluetooth mode */
         force_bt_mode {
             timeout-ms = <50>;
             key-positions = <0 32>;
             bindings = <&bt_mode>;
         };
-	/* COMBO 48 + 59: Switch Desktop Right */
-	swap_desktop_right {
-	    timeout-ms = <50>;
-	    key-positions = <48 59>;
-	    layers = <0>;
-	    bindings = <&kp LC(WIN) LC(CTRL) RIGHT>;
-	};
 
-	/* COMBO 48 + 40: Switch Desktop Left */
-	swap_desktop_left {
-	    timeout-ms = <50>;
-	    key-positions = <48 40>;
-	    layers = <0>;
-	    bindings = <&kp LC(WIN) LC(CTRL) LEFT>;
-	};
+        /* COMBO 48 + 59: Switch Desktop Right (Layer 0 only) */
+        swap_desktop_right {
+            timeout-ms = <50>;
+            key-positions = <48 59>;
+            layers = <0>;
+            bindings = <&desktop_right>;
+        };
+
+        /* COMBO 48 + 40: Switch Desktop Left (Layer 0 only) */
+        swap_desktop_left {
+            timeout-ms = <50>;
+            key-positions = <48 40>;
+            layers = <0>;
+            bindings = <&desktop_left>;
+        };
     };
 };
