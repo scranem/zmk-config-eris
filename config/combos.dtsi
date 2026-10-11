@@ -70,5 +70,20 @@
             key-positions = <0 32>;
             bindings = <&bt_mode>;
         };
+	/* COMBO 48 + 59: Switch Desktop Right */
+	swap_desktop_right {
+	    timeout-ms = <50>;
+	    key-positions = <48 59>;
+	    layers = <0>;
+	    bindings = <&kp LC(WIN) LC(CTRL) RIGHT>;
+	};
+
+	/* COMBO 48 + 40: Switch Desktop Left */
+	swap_desktop_left {
+	    timeout-ms = <50>;
+	    key-positions = <48 40>;
+	    layers = <0>;
+	    bindings = <&kp LC(WIN) LC(CTRL) LEFT>;
+	};
     };
 };
