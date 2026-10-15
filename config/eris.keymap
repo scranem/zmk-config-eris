@@ -1,4 +1,4 @@
-x/*
+/*
  * Eris BLE split keyboard — keymap (62 keys: 31 left + 31 right).
  *
  * Key position index map (use these numbers for combos.dtsi):
@@ -138,7 +138,7 @@ x/*
         toggle4_layer {
             display-name = "Toggle 4";
             bindings = <
-&trans        &none                                                                                            &none         &none 
+&trans        &none                                                                                             &none         &none 
 &trans	      &kp F1        &kp F2        &kp F3        &none         &none 	    &kp F7        &kp F8        &kp F9        &none   
 &trans        &kp F4        &kp F5        &kp F6        &none         &none         &kp F10       &kp F11       &kp F12       &none   
 &trans        &none         &none         &none         		            &none         &none         &none         &none   
