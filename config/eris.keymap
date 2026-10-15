@@ -96,7 +96,7 @@
         toggle1_layer {
             display-name = "Toggle 1";
             bindings = <
-&trans        &none                                                                                		&kp ES_IQMARK &kp BSLH
+&trans        &none                                                                                		&kp ES_IQMARK &kp ES_LBKT
 &kp ES_ORDM   &kp N1        &kp N2        &kp N3        &kp COMMA     &kp ES_PLUS   &kp ES_LBRC   &kp ES_RBRC   &kp ES_IEXCL  &kp ES_AT
 &trans        &kp N4        &kp N5        &kp N6        &kp DOT       &kp ES_MINUS  &kp ES_LPAR   &kp ES_RPAR   &kp ES_CARET  &kp ES_LT
 &trans        &kp N7        &kp N8        &kp N9                                    &kp ES_LBKT   &kp ES_RBKT   &kp ES_HASH   &trans
