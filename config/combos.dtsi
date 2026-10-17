@@ -106,5 +106,13 @@
             layers = <0>;
             bindings = <&desktop_left>;
         };
+
+        /* COMBO 52 + 59: Delete (Layer 0 only) */
+        delete_combo {
+            timeout-ms = <50>;
+            key-positions = <52 59>;
+            layers = <0>;
+            bindings = <&kp DELETE>;
+        };
     };
 };
