@@ -101,15 +101,15 @@
             bindings = <&bt_mode>;
         };
 
-        /* COMBO 48 + 59: Switch Desktop Right (Layer 0 only) */
+        /* COMBO 58 + 59: Switch Desktop Right (Layer 0 only) */
         swap_desktop_right {
             timeout-ms = <50>;
-            key-positions = <43 59>;
+            key-positions = <58 59>;
             layers = <0>;
             bindings = <&desktop_right>;
         };
 
-        /* COMBO 48 + 40: Switch Desktop Left (Layer 0 only) */
+        /* COMBO 43 + 40: Switch Desktop Left (Layer 0 only) */
         swap_desktop_left {
             timeout-ms = <50>;
             key-positions = <43 40>;
@@ -124,10 +124,10 @@
             layers = <0>;
             bindings = <&kp DELETE>;
         };
-	/* COMBO 49 + 59: F23 (Layer 0 only) */
+	/* COMBO 43 + 59: F23 (Layer 0 only) */
 	f23_combo {
 	    timeout-ms = <50>;
-	    key-positions = <49 59>;
+	    key-positions = <43 59>;
 	    layers = <0>;
 	    bindings = <&kp F23>;
 	};
