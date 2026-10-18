@@ -85,6 +85,16 @@
 	    #binding-cells = <0>;
 	    bindings = <&kp F23>, <&to 0>;
 	};
+
+	/* Windows Show Desktop: Win + D */
+	show_desktop: show_desktop {
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+	        = <&macro_press &kp LGUI>
+	        , <&macro_tap &kp D>
+	        , <&macro_release &kp LGUI>;
+	};
     };
 
     combos {
@@ -142,12 +152,20 @@
 	    bindings = <&kp F23>;
 	};
 
-	/* COMBO 49 + 59: F23 + return to default (Gaming layer 3) */
+	/* COMBO 43 + 59: F23 + return to default (Gaming layer 3) */
 	f23_gaming_combo {
     	timeout-ms = <50>;
 	    key-positions = <43 59>;
 	    layers = <3>;
 	    bindings = <&f23_return>;
 	};
+
+	/* COMBO 40 + 58: Show Desktop (Layer 0 only) */
+	show_desktop_combo {
+	    timeout-ms = <50>;
+	    key-positions = <40 58>;
+	    layers = <0>;
+	    bindings = <&show_desktop>;
+	};	
     };
 };
