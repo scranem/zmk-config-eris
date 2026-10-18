@@ -145,7 +145,7 @@
 	/* COMBO 49 + 59: F23 + return to default (Gaming layer 3) */
 	f23_gaming_combo {
     	timeout-ms = <50>;
-	    key-positions = <49 59>;
+	    key-positions = <43 59>;
 	    layers = <3>;
 	    bindings = <&f23_return>;
 	};
