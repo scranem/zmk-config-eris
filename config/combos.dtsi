@@ -74,7 +74,17 @@
                 , <&macro_tap &kp LEFT>
                 , <&macro_release &kp LCTRL>
                 , <&macro_release &kp LGUI>;
+
+
         };
+
+	/* F23 + return to default layer 
+	 */
+	f23_return: f23_return {
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings = <&kp F23>, <&to 0>;
+	};
     };
 
     combos {
@@ -130,6 +140,14 @@
 	    key-positions = <43 59>;
 	    layers = <0 1 2>;
 	    bindings = <&kp F23>;
+	};
+
+	/* COMBO 49 + 59: F23 + return to default (Gaming layer 3) */
+	f23_gaming_combo {
+    	timeout-ms = <50>;
+	    key-positions = <49 59>;
+	    layers = <3>;
+	    bindings = <&f23_return>;
 	};
     };
 };
