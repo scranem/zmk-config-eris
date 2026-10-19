@@ -1,55 +1,21 @@
-/*
- * Eris — combos and mode macros.
- *
- * Key position index map:
- *
- *    0   1                                            2   3
- *    4   5   6   7   8                    9  10  11  12  13
- *   14  15  16  17  18                   19  20  21  22  23
- *   24  25  26  27                           28  29  30  31
- *   32  33  34  35                           36  37  38  39
- *   40  41  42  43                           44  45  46  47
- *   48  49  50  51  52                   53  54  55  56  57
- *       58          59                   60          61
- *
- *
- * NOTE: A ZMK combo can only trigger ONE behavior. Multi-step sequences
- * are wrapped in macros so all steps execute.
- */
-
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
     macros {
-        /*
-         * USB mode:
-         * 1. Select the intentionally empty BT profile (1)
-         * 2. Switch output to USB
-         * 3. Go to layer 4
-         */
+
         usb_mode: usb_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1>, <&out OUT_USB>, <&to 4>;
         };
 
-        /*
-         * Bluetooth mode:
-         * 1. Select paired BT profile (0)
-         * 2. Switch output to BLE
-         * 3. Go to layer 1
-         */
         bt_mode: bt_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0>, <&out OUT_BLE>, <&to 1>;
         };
 
-        /*
-         * Windows virtual desktop RIGHT:
-         * Win + Ctrl + Right
-         */
         desktop_right: desktop_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -61,10 +27,6 @@
                 , <&macro_release &kp LGUI>;
         };
 
-        /*
-         * Windows virtual desktop LEFT:
-         * Win + Ctrl + Left
-         */
         desktop_left: desktop_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -78,15 +40,12 @@
 
         };
 
-	/* F23 + return to default layer 
-	 */
 	f23_return: f23_return {
 	    compatible = "zmk,behavior-macro";
 	    #binding-cells = <0>;
 	    bindings = <&kp F23>, <&to 0>;
 	};
 
-	/* Windows Show Desktop: Win + D */
 	show_desktop: show_desktop {
 	    compatible = "zmk,behavior-macro";
 	    #binding-cells = <0>;
@@ -100,59 +59,38 @@
     combos {
         compatible = "zmk,combos";
 
-        /* Clear current Bluetooth profile */
         shift_esc_pair {
             timeout-ms = <50>;
             key-positions = <4 32>;
             bindings = <&bt BT_CLR>;
         };
 
-        /* Force USB mode */
         force_usb_mode {
             timeout-ms = <50>;
             key-positions = <1 32>;
             bindings = <&usb_mode>;
         };
 
-        /* Force Bluetooth mode */
         force_bt_mode {
             timeout-ms = <50>;
             key-positions = <0 32>;
             bindings = <&bt_mode>;
         };
 
-        /* COMBO 58 + 59: Switch Desktop Right (Layer 0 only) */
-        swap_desktop_right {
-            timeout-ms = <50>;
-            key-positions = <58 59>;
-            layers = <0 1 2>;
-            bindings = <&desktop_right>;
-        };
-
-        /* COMBO 43 + 40: Switch Desktop Left (Layer 0 only) */
-        swap_desktop_left {
-            timeout-ms = <50>;
-            key-positions = <43 40>;
-            layers = <0 1 2>;
-            bindings = <&desktop_left>;
-        };
-
-        /* COMBO 52 + 59: Delete (Layer 0 only) */
         delete_combo {
             timeout-ms = <50>;
             key-positions = <52 59>;
             layers = <0 1 2>;
             bindings = <&kp DELETE>;
         };
-	/* COMBO 43 + 59: F23 (Layer 0 only) */
+
 	f23_combo {
 	    timeout-ms = <50>;
-	    key-positions = <43 59>;
+	    key-positions = <40 58>;
 	    layers = <0 1 2>;
 	    bindings = <&kp F23>;
 	};
 
-	/* COMBO 43 + 59: F23 + return to default (Gaming layer 3) */
 	f23_gaming_combo {
     	timeout-ms = <50>;
 	    key-positions = <43 59>;
@@ -160,10 +98,23 @@
 	    bindings = <&f23_return>;
 	};
 
-	/* COMBO 40 + 58: Show Desktop (Layer 0 only) */
+        swap_desktop_right {
+            timeout-ms = <50>;
+            key-positions = <43 59>;
+            layers = <0 1 2>;
+            bindings = <&desktop_right>;
+        };
+
+        swap_desktop_left {
+            timeout-ms = <50>;
+            key-positions = <43 40>;
+            layers = <0 1 2>;
+            bindings = <&desktop_left>;
+        };
+
 	show_desktop_combo {
 	    timeout-ms = <50>;
-	    key-positions = <40 58>;
+	    key-positions = <47 60>;
 	    layers = <0>;
 	    bindings = <&show_desktop>;
 	};	
