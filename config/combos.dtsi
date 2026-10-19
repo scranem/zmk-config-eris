@@ -78,42 +78,42 @@
         };
 
         delete_combo {
-            timeout-ms = <50>;
+            timeout-ms = <90>;
             key-positions = <52 59>;
             layers = <0 1 2>;
             bindings = <&kp DELETE>;
         };
 
 	f23_combo {
-	    timeout-ms = <50>;
+	    timeout-ms = <80>;
 	    key-positions = <40 58>;
 	    layers = <0 1 2>;
 	    bindings = <&kp F23>;
 	};
 
 	f23_gaming_combo {
-    	timeout-ms = <50>;
-	    key-positions = <33 34 35>;
+    	timeout-ms = <80>;
+	    key-positions = <33 34>;
 	    layers = <3>;
 	    bindings = <&f23_return>;
 	};
 
         swap_desktop_right {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <43 59>;
             layers = <0 1 2>;
             bindings = <&desktop_right>;
         };
 
         swap_desktop_left {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <43 40>;
             layers = <0 1 2>;
             bindings = <&desktop_left>;
         };
 
 	show_desktop_combo {
-	    timeout-ms = <50>;
+	    timeout-ms = <80>;
 	    key-positions = <47 60>;
 	    layers = <0>;
 	    bindings = <&show_desktop>;
