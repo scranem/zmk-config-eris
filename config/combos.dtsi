@@ -91,13 +91,6 @@
 	    bindings = <&kp F23>;
 	};
 
-	f23_gaming_combo {
-    	timeout-ms = <80>;
-	    key-positions = <33 34>;
-	    layers = <3>;
-	    bindings = <&f23_return>;
-	};
-
         swap_desktop_right {
             timeout-ms = <80>;
             key-positions = <43 59>;
