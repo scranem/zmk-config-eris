@@ -107,7 +107,7 @@
 
 	show_desktop_combo {
 	    timeout-ms = <80>;
-	    key-positions = <47 60>;
+	    key-positions = <47 56>;
 	    layers = <0>;
 	    bindings = <&show_desktop>;
 	};	
